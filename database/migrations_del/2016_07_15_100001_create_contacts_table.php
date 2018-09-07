@@ -23,6 +23,7 @@ class CreateContactsTable extends Migration
             $table->string('mobile', 50)->nullable();
             $table->string('email', 250)->nullable();
             $table->string('website', 250)->nullable();
+            $table->string('details', 250)->nullable();
             $table->text('address')->nullable();
             $table->string('slug', 200)->nullable();
             $table->enum('status', ['draft', 'published', 'hidden', 'suspended', 'spam'])->default('draft')->nullable();

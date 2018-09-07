@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->longText('related_products')->nullable();
             $table->longText('name')->nullable();
             $table->float('price')->nullable();
-            $table->enum('status', ['enabled','disabled'])->nullable();
+//            $table->enum('status', ['enabled','disabled'])->nullable();
             $table->integer('quantity')->nullable();
             $table->longText('description')->nullable();
             $table->longText('return_policy')->nullable();
@@ -40,6 +40,8 @@ class CreateProductsTable extends Migration
             $table->string('mpn', 46)->nullable();
             $table->string('location', 255)->nullable();
             $table->string('tax_class', 30)->nullable();
+            $table->string('premium', 30)->nullable();
+            $table->string('featured', 30)->nullable();
             $table->enum('substract_stock', ['yes','no'])->nullable();
             $table->enum('outofstock_status', ['in stock','out of stock','pre-order'])->nullable();
             $table->text('seo_keyword')->nullable();

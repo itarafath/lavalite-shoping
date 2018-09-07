@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->integer('parent_id')->nullable();
             $table->string('name', 255)->nullable();
-            $table->enum('status', ['enabled','disabled'])->nullable();
+//            $table->enum('status', ['enabled','disabled'])->nullable();
             $table->text('meta_title')->nullable();
             $table->text('meta_description')->nullable();
             $table->text('meta_keyword')->nullable();
