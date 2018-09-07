@@ -8,18 +8,18 @@ class ComposerStaticInitc1282b8ca8d9d066159879791b3e6bdb
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
-        '0ae9363aafc4d1397a736454a7c27307' => __DIR__ . '/..' . '/lavalite/framework/src/Litepie/Foundation/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '0ae9363aafc4d1397a736454a7c27307' => __DIR__ . '/..' . '/lavalite/framework/src/Litepie/Foundation/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -144,8 +144,8 @@ class ComposerStaticInitc1282b8ca8d9d066159879791b3e6bdb
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -333,8 +333,8 @@ class ComposerStaticInitc1282b8ca8d9d066159879791b3e6bdb
         ),
         'Intervention\\Image\\' => 
         array (
-            0 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
-            1 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            1 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
         ),
         'Illuminate\\' => 
         array (
@@ -475,23 +475,23 @@ class ComposerStaticInitc1282b8ca8d9d066159879791b3e6bdb
         'CalendarTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CalendarTableSeeder.php',
         'ClientTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ClientTableSeeder.php',
         'ContactTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ContactTableSeeder.php',
-        'CreateBlocksTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_14_100001_create_blocks_table.php',
-        'CreateCalendarsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_18_100001_create_calendars_table.php',
-        'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_05_100001_create_clients_table.php',
-        'CreateContactsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_15_100001_create_contacts_table.php',
-        'CreateMenusTable' => __DIR__ . '/../..' . '/database/migrations/2015_08_05_100012_create_menus_table.php',
-        'CreateMessagesTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_08_100001_create_messages_table.php',
-        'CreateNewsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_13_100001_create_news_table.php',
-        'CreatePagesTable' => __DIR__ . '/../..' . '/database/migrations/2015_08_05_100011_create_pages_table.php',
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_05_100010_create_password_resets_table.php',
-        'CreatePermissionsTable' => __DIR__ . '/../..' . '/database/migrations/2015_02_23_161102_create_permissions_table.php',
-        'CreateRevisionsTable' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000017_create_revisions_table.php',
-        'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2015_02_23_161101_create_roles_table.php',
-        'CreateSettingsTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_29_100001_create_settings_table.php',
-        'CreateShoppingCartTable' => __DIR__ . '/../..' . '/database/migrations/0000_00_00_000000_create_shoppingcart_table.php',
-        'CreateTasksTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_07_100001_create_tasks_table.php',
-        'CreateTeamsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_14_100001_create_teams_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_05_100001_create_users_table.php',
+        'CreateBlocksTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_07_14_100001_create_blocks_table.php',
+        'CreateCalendarsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_07_18_100001_create_calendars_table.php',
+        'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_01_05_100001_create_clients_table.php',
+        'CreateContactsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_07_15_100001_create_contacts_table.php',
+        'CreateMenusTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_08_05_100012_create_menus_table.php',
+        'CreateMessagesTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_07_08_100001_create_messages_table.php',
+        'CreateNewsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_10_13_100001_create_news_table.php',
+        'CreatePagesTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_08_05_100011_create_pages_table.php',
+        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_01_05_100010_create_password_resets_table.php',
+        'CreatePermissionsTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_02_23_161102_create_permissions_table.php',
+        'CreateRevisionsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_01_01_000017_create_revisions_table.php',
+        'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_02_23_161101_create_roles_table.php',
+        'CreateSettingsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_11_29_100001_create_settings_table.php',
+        'CreateShoppingCartTable' => __DIR__ . '/../..' . '/database/migrations_del/0000_00_00_000000_create_shoppingcart_table.php',
+        'CreateTasksTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_07_07_100001_create_tasks_table.php',
+        'CreateTeamsTable' => __DIR__ . '/../..' . '/database/migrations_del/2016_10_14_100001_create_teams_table.php',
+        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations_del/2015_01_05_100001_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
