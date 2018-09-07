@@ -32,10 +32,10 @@ class BlogPublicController extends BaseController
     protected function index()
     {
         $blogs = $this->repository
-        ->pushCriteria(app('Litepie\Repository\Criteria\RequestCriteria'))
-        ->scopeQuery(function($query){
-            return $query->orderBy('id','DESC');
-        })->paginate(4);
+            ->pushCriteria(app('Litepie\Repository\Criteria\RequestCriteria'))
+            ->scopeQuery(function ($query) {
+                return $query->orderBy('id', 'DESC');
+            })->paginate(4);
 
         return $this->theme->of('blog::public.blog.index', compact('blogs'))->render();
     }
@@ -49,20 +49,20 @@ class BlogPublicController extends BaseController
      */
     protected function show($slug)
     {
-        $blog = $this->repository->scopeQuery(function($query) use ($slug) {
-            return $query->orderBy('id','DESC')
-                         ->where('slug', $slug);
+        $blog = $this->repository->scopeQuery(function ($query) use ($slug) {
+            return $query->orderBy('id', 'DESC')
+                ->where('slug', $slug);
         })->first(['*']);
-        $next = $this->repository->scopeQuery(function($query) use ($blog) {
-            return $query->orderBy('id','ASC')
-                         ->where('id','>',$blog->id);
+        $next = $this->repository->scopeQuery(function ($query) use ($blog) {
+            return $query->orderBy('id', 'ASC')
+                ->where('id', '>', $blog->id);
         })->first(['*']);
-        $prev = $this->repository->scopeQuery(function($query) use ($blog) {
-            return $query->orderBy('id','DESC')
-                         ->where('id','<',$blog->id);
+        $prev = $this->repository->scopeQuery(function ($query) use ($blog) {
+            return $query->orderBy('id', 'DESC')
+                ->where('id', '<', $blog->id);
         })->first(['*']);
 
-        return $this->theme->of('blog::public.blog.show', compact('blog','next','prev'))->render();
+        return $this->theme->of('blog::public.blog.show', compact('blog', 'next', 'prev'))->render();
     }
 
 }
