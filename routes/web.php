@@ -9,7 +9,7 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 |
-*/
+ */
 
 Route::get('/', 'PublicController@home');
 Route::post('web/test/profile/picture', 'PublicController@picture');
@@ -19,7 +19,6 @@ Route::group(['prefix' => '{guard?}'], function () {
 });
 Auth::routes();
 
-
 Route::get('/redirect', function () {
     $query = http_build_query([
         'client_id' => '1',
@@ -28,5 +27,5 @@ Route::get('/redirect', function () {
         'scope' => '',
     ]);
 
-    return redirect('http://localhost/lavalite/5.0/public/oauth/authorize?'.$query);
+    return redirect('http://localhost/lavalite/5.0/public/oauth/authorize?' . $query);
 });
