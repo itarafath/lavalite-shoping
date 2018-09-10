@@ -34,7 +34,7 @@ class CreateBlocksTable extends Migration
          */
         Schema::create('blocks', function ($table) {
             $table->increments('id');
-            $table->integer('category_id')->nullable();
+            $table->integer('category')->nullable();
             $table->string('name', 255)->nullable();
             $table->string('url', 255)->nullable();
             $table->string('icon', 255)->nullable();
