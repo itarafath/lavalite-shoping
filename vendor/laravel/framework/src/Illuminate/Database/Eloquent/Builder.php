@@ -838,7 +838,7 @@ class Builder
         // optimize the subquery to only run a "where exists" clause instead of
         // the full "count" clause. This will make the query run much faster.
         $queryType = $this->shouldRunExistsQuery($operator, $count)
-                ? 'getRelationQuery' : 'getRelationCountQuery';
+            ? 'getRelationQuery' : 'getRelationCountQuery';
 
         $query = $relation->{$queryType}($relation->getRelated()->newQuery(), $this);
 
@@ -955,7 +955,7 @@ class Builder
      * @param  string  $boolean
      * @return \Illuminate\Database\Eloquent\Builder|static
      */
-    protected function addHasWhere(Builder $hasQuery, Relation $relation, $operator, $count, $boolean)
+    protected function addHasWhere(self $hasQuery, Relation $relation, $operator, $count, $boolean)
     {
         $hasQuery->mergeModelDefinedRelationConstraints($relation->getQuery());
 
@@ -1006,7 +1006,7 @@ class Builder
      * @param  \Illuminate\Database\Eloquent\Builder  $relation
      * @return \Illuminate\Database\Eloquent\Builder|static
      */
-    public function mergeModelDefinedRelationConstraints(Builder $relation)
+    public function mergeModelDefinedRelationConstraints(self $relation)
     {
         $removedScopes = $relation->removedScopes();
 
@@ -1228,7 +1228,7 @@ class Builder
         // We will keep track of how many wheres are on the query before running the
         // scope so that we can properly group the added scope constraints in the
         // query as their own isolated nested where statement and avoid issues.
-        $originalWhereCount = count($query->wheres);
+        $originalWhereCount = is_null($query->wheres) ? 0 : count($query->wheres);
 
         $result = $scope(...array_values($parameters)) ?: $this;
 
@@ -1274,7 +1274,7 @@ class Builder
      */
     protected function shouldNestWheresForScope(QueryBuilder $query, $originalWhereCount)
     {
-        return count($query->wheres) > $originalWhereCount;
+        return count((array)$query->wheres) > $originalWhereCount;
     }
 
     /**
