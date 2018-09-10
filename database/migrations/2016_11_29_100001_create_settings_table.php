@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeamsTable extends Migration
+class CreateSettingsTable extends Migration
 {
     /*
      * Run the migrations.
@@ -14,17 +14,18 @@ class CreateTeamsTable extends Migration
     {
 
         /*
-         * Table: teams
+         * Table: settings
          */
-        Schema::create('teams', function ($table) {
+        Schema::create('settings', function ($table) {
             $table->increments('id');
-            $table->string('name', 15)->nullable();
-            $table->string('description', 100)->nullable();
-            $table->text('settings')->nullable();
+            $table->string('skey', 255)->nullable();
+            $table->string('name', 255)->nullable();
+            $table->string('value', 255)->nullable();
+            $table->enum('type', ['System', 'Default', 'User'])->nullable();
             $table->string('slug', 200)->nullable();
             $table->enum('status', ['draft', 'complete', 'verify', 'approve', 'publish', 'unpublish', 'archive'])->default('draft')->nullable();
             $table->integer('user_id')->nullable();
-            $table->string('user_type',50)->nullable();
+            $table->string('user_type', 50)->nullable();
             $table->string('upload_folder', 100)->nullable();
             $table->softDeletes();
             $table->nullableTimestamps();
@@ -39,6 +40,6 @@ class CreateTeamsTable extends Migration
 
     public function down()
     {
-        Schema::drop('teams');
+        Schema::drop('settings');
     }
 }

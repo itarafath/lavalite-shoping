@@ -38,7 +38,7 @@ class CreateUsersTable extends Migration
             $table->longText('permissions')->nullable();
             $table->enum('status', ['New', 'Active', 'Suspended'])->default('New')->nullable();
             $table->integer('user_id')->nullable();
-            $table->string('user_type',50)->nullable();
+            $table->string('user_type', 50)->nullable();
             $table->string('upload_folder', 100)->nullable();
             $table->softDeletes();
             $table->nullableTimestamps();

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSettingsTable extends Migration
+class CreateOrderHistoriesTable extends Migration
 {
     /*
      * Run the migrations.
@@ -14,18 +14,18 @@ class CreateSettingsTable extends Migration
     {
 
         /*
-         * Table: settings
+         * Table: order_histories
          */
-        Schema::create('settings', function ($table) {
+        Schema::create('order_histories', function ($table) {
             $table->increments('id');
-            $table->string('skey', 255)->nullable();
-            $table->string('name', 255)->nullable();
-            $table->string('value', 255)->nullable();
-            $table->enum('type', ['System','Default','User'])->nullable();
+            $table->integer('order_id')->nullable();
+            $table->integer('order_status_id')->nullable();
+            $table->tinyInteger('notify')->nullable();
+            $table->text('comment')->nullable();
             $table->string('slug', 200)->nullable();
             $table->enum('status', ['draft', 'complete', 'verify', 'approve', 'publish', 'unpublish', 'archive'])->default('draft')->nullable();
             $table->integer('user_id')->nullable();
-            $table->string('user_type',50)->nullable();
+            $table->string('user_type', 50)->nullable();
             $table->string('upload_folder', 100)->nullable();
             $table->softDeletes();
             $table->nullableTimestamps();
@@ -40,6 +40,6 @@ class CreateSettingsTable extends Migration
 
     public function down()
     {
-        Schema::drop('settings');
+        Schema::drop('order_histories');
     }
 }

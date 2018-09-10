@@ -23,7 +23,7 @@ class CreateCalendarsTable extends Migration
             $table->dateTime('start')->nullable();
             $table->dateTime('end')->nullable();
             $table->string('location', 255)->nullable();
-            $table->string('color', 255)->nullable();            
+            $table->string('color', 255)->nullable();
             $table->string('details', 255)->nullable();
             $table->string('created_by', 255)->nullable();
             $table->integer('assignee_id')->nullable();

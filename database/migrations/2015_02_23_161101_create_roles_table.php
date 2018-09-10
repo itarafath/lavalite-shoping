@@ -17,7 +17,7 @@ class CreateRolesTable extends Migration
             $table->longText('permissions')->nullable();
             $table->timestamps();
         });
-        
+
         Schema::create('roleables', function (Blueprint $table) {
             $table->integer('role_id')->unsigned()->index();
             $table->integer('roleable_id')->unsigned()->index();
